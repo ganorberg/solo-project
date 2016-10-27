@@ -21460,9 +21460,9 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	// const TodoController = require('../../server/todoController');
-	var todoList = __webpack_require__(200);
+	var todoList = __webpack_require__(175);
 
-	var todoId = 2;
+	var todoId = 9;
 
 	var App = function (_Component) {
 	  _inherits(App, _Component);
@@ -21487,18 +21487,15 @@
 	      var todo = { text: val, id: todoId++ };
 	      todoList.push(todo);
 
-	      fetch('/todoData', {
-	        method: 'POST',
-	        headers: {
-	          'Accept': 'application/json',
-	          'Content-Type': 'application/json'
-	        },
-	        body: JSON.stringify(todo)
-	      }).then(function (response) {
-	        return response.json();
-	      }).catch(function (err) {
-	        return console.log(err);
-	      });
+	      // fetch('/todoData', {
+	      //   method: 'POST',
+	      //   headers: {
+	      //     'Accept': 'application/json',
+	      //     'Content-Type': 'application/json'
+	      //   },
+	      //   body: JSON.stringify(todo)
+	      // }).then(response => response.json())
+	      // .catch(err => console.log(err))
 
 	      this.setState({ taskList: todoList });
 	    }
@@ -21625,42 +21622,38 @@
 	exports.default = Todo;
 
 /***/ },
-/* 175 */,
-/* 176 */,
-/* 177 */,
-/* 178 */,
-/* 179 */,
-/* 180 */,
-/* 181 */,
-/* 182 */,
-/* 183 */,
-/* 184 */,
-/* 185 */,
-/* 186 */,
-/* 187 */,
-/* 188 */,
-/* 189 */,
-/* 190 */,
-/* 191 */,
-/* 192 */,
-/* 193 */,
-/* 194 */,
-/* 195 */,
-/* 196 */,
-/* 197 */,
-/* 198 */,
-/* 199 */,
-/* 200 */
+/* 175 */
 /***/ function(module, exports) {
 
 	'use strict';
 
 	module.exports = [{
-	  text: 'play a game',
+	  text: 'Play a game',
 	  id: 0
 	}, {
-	  text: 'ride a horse',
+	  text: 'Ride a horse',
 	  id: 1
+	}, {
+	  text: 'Hang out with taylor swift',
+	  id: 2
+	}, {
+	  text: 'Travel to North Dakota',
+	  id: 3
+	}, {
+	  text: 'Attend Codesmith React meetup',
+	  id: 4
+	}, {
+	  text: 'Eat kale',
+	  id: 5
+	}, {
+	  text: 'Jump rope',
+	  id: 6
+	}, {
+	  text: 'Spend a Benjamin',
+	  id: 7
+	}, {
+	  text: 'Get some sleep',
+	  id: 8
 	}];
 
 /***/ }

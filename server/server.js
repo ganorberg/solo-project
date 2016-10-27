@@ -3,7 +3,6 @@ const app = express();
 const bodyparser = require('body-parser');
 const path = require('path');
 const cors = require('cors');
-const todoData = require('./server.js')
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const todoController = require('./todoController');

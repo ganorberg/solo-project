@@ -1,8 +1,25 @@
 html, body {
   margin: 0;
   padding: 0;
+  font-family: Helvetica;
 }
 
-#root {
-  background-color: blue;
+#input {
+  display: block;
+  margin: 100px auto 0;
+  width: 300px;
+}
+
+li {
+  display: block;
+  list-style: none;
+  width: 300px;
+  margin: 10px auto;
+}
+
+button {
+  display: block;
+  list-style: none;
+  width: 300px;
+  margin: 10px auto;
 }

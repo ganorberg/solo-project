@@ -5,7 +5,7 @@ import Todo from './Todo';
 // const TodoController = require('../../server/todoController');
 let todoList = require('../../database/mockData');
 
-let todoId = 2;
+let todoId = 9;
 class App extends Component {
   constructor(props) {
     super(props);
@@ -21,15 +21,15 @@ class App extends Component {
     const todo = { text: val, id: todoId++ }
     todoList.push(todo);
 
-    fetch('/todoData', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(todo)
-    }).then(response => response.json())
-    .catch(err => console.log(err))
+    // fetch('/todoData', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Accept': 'application/json',
+    //     'Content-Type': 'application/json'
+    //   },
+    //   body: JSON.stringify(todo)
+    // }).then(response => response.json())
+    // .catch(err => console.log(err))
 
     this.setState({taskList: todoList});
   }
